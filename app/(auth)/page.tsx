@@ -43,14 +43,13 @@ function Auth() {
         justify-center
         gap-5 
         p-10 
-        w-full
         h-full
       "
     >
       <h1
         className="
-          text-xl
-          sm:text-2xl text-center
+          text-2xl
+          text-center
           w-full
         "
       >
