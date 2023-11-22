@@ -17,6 +17,9 @@ dependencies:
   lucide-react:
     specifier: ^0.292.0
     version: 0.292.0(react@18.2.0)
+  material-symbols:
+    specifier: ^0.14.1
+    version: 0.14.1
   next:
     specifier: 14.0.3
     version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
@@ -2232,6 +2235,10 @@ packages:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /material-symbols@0.14.1:
+    resolution: {integrity: sha512-qFUhEt90BbKMkpUIN8OdrjFpFBSeQ2XyB6H2Z08wecOWJnbkvAgslejKivgEewtPse14ElkOwZeoHakPZYUEhQ==}
     dev: false
 
   /merge-stream@2.0.0:
