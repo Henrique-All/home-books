@@ -41,7 +41,7 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
     <div className="flex">
       <div
         className="
-          fixed
+          fixed sm:static
           flex
           items-center
           justify-between sm:justify-normal
