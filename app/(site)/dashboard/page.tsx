@@ -9,6 +9,7 @@ export default function Dashboard() {
     <div>
       <h1>Dashboard Page</h1>
       <Button onClick={() => signOut()}>Sair</Button>
+      <span className="material-symbols-outlined">face</span>
     </div>
   )
 }
