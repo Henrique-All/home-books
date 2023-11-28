@@ -1,10 +1,9 @@
 'use client'
 
-import { Loader2 } from 'lucide-react'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaSpinner } from 'react-icons/fa'
 
 import { Button } from '@/components/ui/button'
 
@@ -70,8 +69,7 @@ function Auth() {
       >
         {isLoading ? (
           <div className="inline-flex items-center gap-5">
-            <Loader2 size={36} className="mr-2 animate-spin" />
-            <span>Carregando</span>
+            <FaSpinner className="animate-spin" size={36} />
           </div>
         ) : (
           <div className="inline-flex items-center gap-5">
