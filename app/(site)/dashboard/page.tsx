@@ -1,14 +1,10 @@
 'use client'
 
-import { signOut } from 'next-auth/react'
-import { useState } from 'react'
-
 import { Button } from '@/components/ui/button'
-import data from '@/lib/books.json'
+import { author, books, category } from '@/lib/books'
+import { Plus } from 'lucide-react'
 
 export default function Dashboard() {
-  const [books, setBooks] = useState(data)
-
   return (
     <div className="flex flex-col gap-5 w-full p-5">
       <div className="flex flex-col md:flex-row gap-5 w-full">
@@ -27,7 +23,7 @@ export default function Dashboard() {
           <h2 className="text-2xl font-bold text-center">
             Total de categorias
           </h2>
-          <h1 className="text-5xl font-bold">{books.length}</h1>
+          <h1 className="text-5xl font-bold">{category.length}</h1>
         </div>
         <div
           className="
@@ -43,7 +39,7 @@ export default function Dashboard() {
           "
         >
           <h2 className="text-2xl font-bold text-center">Total de autores</h2>
-          <h1 className="text-5xl font-bold">350</h1>
+          <h1 className="text-5xl font-bold">{author.length}</h1>
         </div>
         <div
           className="
@@ -67,9 +63,16 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="flex flex-col gap-[15px] w-full">
-        <h2 className="font-bold text-2xl">Últimos 5 livros cadastrados</h2>
+        <div className="flex justify-between items-center">
+          <h2 className="font-bold text-2xl">Últimos 5 livros cadastrados</h2>
+          <Button
+            size="icon"
+            className="bg-primaryColor-default hover:bg-primaryColor-default"
+          >
+            <Plus />
+          </Button>
+        </div>
       </div>
-      <Button onClick={() => signOut()}>Sair</Button>
       <span className="material-symbols-outlined">face</span>
     </div>
   )
