@@ -26,7 +26,7 @@ export function MenuItem({ icon, title, active, href }: MenuItemProps) {
         text-neutral-400
         hover:text-primaryColor-default
         transition
-        py-[20px]`,
+        sm:py-[20px]`,
         active && 'text-primaryColor-default',
       )}
     >

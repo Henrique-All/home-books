@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 
 import { Icon } from '@/components/Icon'
 import { MenuItem } from './MenuItem'
+import { UserNav } from './user-nav'
 
 export function Sidebar({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -57,9 +58,23 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
           sm:p-[30px]
         "
       >
-        {routes.map((route) => (
-          <MenuItem key={route.title} {...route} />
-        ))}
+        <div
+          className="
+            flex
+            sm:flex-col
+            justify-evenly sm:justify-normal
+            items-center sm:items-start
+            w-full
+            sm:h-full
+          "
+        >
+          {routes.map((route) => (
+            <MenuItem key={route.title} {...route} />
+          ))}
+          <div className="sm:bottom-11 sm:fixed mr-9 sm:mr-0">
+            <UserNav />
+          </div>
+        </div>
       </div>
       {children}
     </div>
