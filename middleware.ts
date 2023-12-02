@@ -7,5 +7,5 @@ export default withAuth({
 })
 
 export const config = {
-  matcher: ['/dashboard', '/categories'],
+  matcher: ['/dashboard', '/categories', '/authors/', '/books'],
 }
