@@ -26,12 +26,21 @@ export function MenuItem({ icon, title, active, href }: MenuItemProps) {
         text-neutral-400
         hover:text-primaryColor-default
         transition
-        sm:py-[20px]`,
+        delay-1000
+        sm:py-[20px]
+        `,
         active && 'text-primaryColor-default',
       )}
     >
       {icon}
-      <span className="hidden sm:group-hover:block">{title}</span>
+      <span
+        className="
+        hidden
+        transition
+        sm:group-hover:block"
+      >
+        {title}
+      </span>
     </Link>
   )
 }

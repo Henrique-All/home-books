@@ -56,6 +56,7 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
           transition-all
           text-white
           sm:p-[30px]
+          z-10
         "
       >
         <div

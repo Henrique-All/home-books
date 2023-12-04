@@ -14,8 +14,8 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col gap-5 w-full p-5">
-      <div className="flex flex-col md:flex-row gap-5 w-full">
+    <div className="flex flex-col gap-5 w-full p-5  sm:h-screen sm:overflow-y-scroll md:overflow-y-auto">
+      <div className="flex flex-col md:flex-row gap-5 w-full ">
         <div
           className="
             flex 
@@ -82,7 +82,9 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
-      <BooksDataTable data={data} columns={columns} />
+      <div className="mb-20 sm:mb-6">
+        <BooksDataTable data={data} columns={columns} />
+      </div>
     </div>
   )
 }

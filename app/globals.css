@@ -9,6 +9,17 @@ body,
   height: 100%;
 }
 
+*::-webkit-scrollbar {
+  @apply w-0 sm:w-1;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+*::-webkit-scrollbar-thumb {
+  @apply h-1 bg-zinc-600;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
