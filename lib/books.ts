@@ -1,160 +1,108 @@
-const author = [
-  {
-    id: 1,
-    name: 'Jhon Doe',
-    biography: 'Biografia do Jhon',
-  },
-  {
-    id: 2,
-    name: 'Luan Campos',
-    biography: 'Biografia do Luan',
-  },
-  {
-    id: 3,
-    name: 'Smith Doe',
-    biography: 'Biografia do Smith',
-  },
-  {
-    id: 4,
-    name: 'Sarah Connor',
-    biography: 'Biografia da Sara',
-  },
-  {
-    id: 5,
-    name: 'Sam Doe',
-    biography: 'Biografia do Sam',
-  },
-  {
-    id: 6,
-    name: 'Will Doe',
-    biography: 'Biografia do Will',
-  },
-  {
-    id: 7,
-    name: 'Nancy Doe',
-    biography: 'Biografia da Nancy ',
-  },
-  {
-    id: 8,
-    name: 'Lira Python',
-    biography: 'Biografia do Lira',
-  },
-  {
-    id: 9,
-    name: 'Caio R. M.',
-    biography: 'Biografia do Caio',
-  },
-  {
-    id: 10,
-    name: 'Everton Ribeiro',
-    biography: 'Biografia do Everton',
-  },
+const categories = [
+  'Fantasia',
+  'Comedia',
+  'Ação',
+  'Romance',
+  'Ficção Cientifica',
 ]
 
-const category = [
-  {
-    id: 1,
-    name: 'Science Fiction',
-  },
-  {
-    id: 2,
-    name: 'Fantasy',
-  },
-  {
-    id: 3,
-    name: 'Romance',
-  },
-  {
-    id: 4,
-    name: 'Comedy',
-  },
-  {
-    id: 5,
-    name: 'Action',
-  },
-  {
-    id: 6,
-    name: 'Horror',
-  },
-  {
-    id: 7,
-    name: 'Thriller',
-  },
+const authors = [
+  'Alicia Ferreira',
+  'Arana Marques',
+  'Marta Castro',
+  'Leandro Alves',
+  'Ana Cristina',
+  'Alana Albuquerque',
+  'Silva Mendez',
+  'Daniel Silveira',
+  'Carla Siqueira',
 ]
 
 const books = [
   {
     id: 1,
     title: 'O Silêncio dos Inocentes',
-    authorID: author[0].id,
-    category: category[3].id,
+    author: authors[2],
+    biography: 'Biografia do Jhon',
+    category: categories[1],
   },
   {
     id: 2,
     title: 'As Aventuras de Sherlock Homes',
-    authorID: author[6].id,
-    category: category[3].id,
+    author: authors[5],
+    biography: 'Biografia do Luan',
+    category: authors[8],
   },
   {
     id: 3,
     title: 'Odisseia',
-    authorID: author[4].id,
-    category: category[4].id,
+    author: authors[3],
+    biography: 'Biografia do Caio',
+    category: categories[4],
   },
   {
     id: 4,
     title: 'O mundo se despedaça',
-    authorID: author[1].id,
-    category: category[1].id,
+    author: authors[8],
+    biography: 'Biografia do Jhon',
+    category: categories[1],
   },
   {
     id: 5,
     title: 'Cem Anos de Solidão',
-    authorID: author[0].id,
-    category: category[3].id,
+    author: authors[4],
+    biography: 'Biografia do Luan',
+    category: categories[2],
   },
   {
     id: 6,
     title: 'A Divina Comédia',
-    authorID: author[2].id,
-    category: category[4].id,
+    author: authors[1],
+    biography: 'Biografia da Nancy ',
+    category: categories[2],
   },
   {
     id: 7,
     title: 'Rei Lear',
-    authorID: author[6].id,
-    category: category[1].id,
+    author: authors[5],
+    biography: 'Biografia da Sara',
+    category: categories[3],
   },
   {
     id: 8,
     title: 'O Principe',
-    authorID: author[1].id,
-    category: category[6].id,
+    author: authors[4],
+    biography: 'Biografia do Everton',
+    category: categories[1],
   },
   {
     id: 9,
     title: 'Madame Bovary',
-    authorID: author[6].id,
-    category: category[1].id,
+    author: authors[7],
+    biography: 'Biografia do Jhon',
+    category: categories[1],
   },
   {
     id: 10,
     title: 'O Pequeno Principe',
-    authorID: author[6].id,
-    category: category[2].id,
+    author: authors[8],
+    biography: 'Biografia do Sam',
+    category: categories[4],
   },
   {
     id: 11,
     title: 'Lolita',
-    authorID: author[6].id,
-    category: category[1].id,
+    author: authors[2],
+    biography: 'Biografia do Everton',
+    category: categories[2],
   },
   {
     id: 12,
     title: 'Guerra e Paz',
-    authorID: author[1].id,
-    category: category[1].id,
+    author: authors[3],
+    biography: 'Biografia do Will',
+    category: categories[1],
   },
 ]
 
-export { author, books, category }
+export { authors, books, categories }
