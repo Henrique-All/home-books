@@ -1,10 +1,18 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { author, books, category } from '@/lib/books'
 import { Plus } from 'lucide-react'
 
+import { Button } from '@/components/ui/button'
+import { authors, books, categories } from '@/lib/books'
+import { columns } from './columns'
+import { BooksDataTable } from './data-table'
+
 export default function Dashboard() {
+  const data = []
+  for (let i = 0; i < 5; i++) {
+    data.push(books[i])
+  }
+
   return (
     <div className="flex flex-col gap-5 w-full p-5">
       <div className="flex flex-col md:flex-row gap-5 w-full">
@@ -13,9 +21,10 @@ export default function Dashboard() {
             flex 
             flex-col
             items-center 
+            justify-center 
             gap-[10px]
-            p-5
             w-full
+            p-5
             rounded-[20px]
             shadow-lg
           "
@@ -23,7 +32,7 @@ export default function Dashboard() {
           <h2 className="text-2xl font-bold text-center">
             Total de categorias
           </h2>
-          <h1 className="text-5xl font-bold">{category.length}</h1>
+          <h1 className="text-5xl font-bold">{categories.length}</h1>
         </div>
         <div
           className="
@@ -39,7 +48,7 @@ export default function Dashboard() {
           "
         >
           <h2 className="text-2xl font-bold text-center">Total de autores</h2>
-          <h1 className="text-5xl font-bold">{author.length}</h1>
+          <h1 className="text-5xl font-bold">{authors.length}</h1>
         </div>
         <div
           className="
@@ -73,7 +82,7 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
-      <span className="material-symbols-outlined">face</span>
+      <BooksDataTable data={data} columns={columns} />
     </div>
   )
 }
